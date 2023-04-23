@@ -20,7 +20,7 @@ public class PokemonApiTest {
     private static final String POKEMON_API_URI = "https://pokeapi.co/api/v2/pokemon";
 
     @Test
-    public void testPokemonApi(){
+    void testPokemonApi(){
         var pokemonResponse = getApiResponseAs(POKEMON_API_URI, PokemonResponse.class);
 
         var abilityMap = pokemonResponse.getResults().stream()
